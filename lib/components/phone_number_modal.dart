@@ -23,28 +23,23 @@ class _PhoneNumberModalState extends State<PhoneNumberModal> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 36.0,
-              vertical: 30.0,
-            ),
-            decoration: BoxDecoration(
-                color: Colors.blueGrey[700],
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
-                )),
-            child: Column(
-              children: [
-                AuthTextField(
-                  label: 'Phone Number',
-                  onChanged: (val) => {phoneNumber = val},
-                  placeholder: 'example: +6281234567890',
-                ),
-                RoundedButton(
-                    title: widget.buttonTitle,
-                    onPressed: () => widget.onPressed(phoneNumber))
-              ],
-            )));
+      child: Container(
+          padding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          child: Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
+              child: Column(
+                children: [
+                  AuthTextField(
+                    label: 'Phone Number',
+                    onChanged: (val) => {phoneNumber = val},
+                    placeholder: 'example: +6281234567890',
+                  ),
+                  RoundedButton(
+                      title: widget.buttonTitle,
+                      onPressed: () => widget.onPressed(phoneNumber))
+                ],
+              ))),
+    );
   }
 }

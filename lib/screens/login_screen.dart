@@ -136,6 +136,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                           showModalBottomSheet(
                                               isScrollControlled: true,
                                               context: context,
+                                              backgroundColor:
+                                                  Colors.blueGrey[700],
+                                              shape:
+                                                  const RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.only(
+                                                topLeft: Radius.circular(20.0),
+                                                topRight: Radius.circular(20.0),
+                                              )),
                                               builder: (context) =>
                                                   PhoneNumberModal(
                                                       buttonTitle: 'Log in',

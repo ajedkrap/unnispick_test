@@ -79,8 +79,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           context: context,
           phoneNumber: phoneNumber,
           onSuccess: () {
-             Navigator.of(context).pop();
-             goToWeathers();
+            goToWeathers();
           });
     } catch (e) {
       print(e);
@@ -161,12 +160,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                         onPressed: () {
                                           showModalBottomSheet(
                                               isScrollControlled: true,
+                                              backgroundColor:
+                                                  Colors.blueGrey[700],
+                                              shape:
+                                                  const RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.only(
+                                                topLeft: Radius.circular(20.0),
+                                                topRight: Radius.circular(20.0),
+                                              )),
                                               context: context,
                                               builder: (context) =>
                                                   PhoneNumberModal(
                                                       buttonTitle: 'Log in',
                                                       onPressed: (phoneNumber) {
-                                                       
                                                         onPressPhoneSignIn(
                                                             context,
                                                             phoneNumber);

@@ -51,8 +51,6 @@ class _WeathersScreenState extends State<WeathersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // var screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
         appBar: AppBar(
           title: Text('Weathers',

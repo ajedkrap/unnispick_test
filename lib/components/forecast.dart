@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:unnispick_test/constans.dart';
 import 'package:unnispick_test/screens/weather_detail_screen.dart';
 import 'package:unnispick_test/services/weather.dart';
-
-DateFormat dateFormat = DateFormat('EEE, MMM dd, yyyy h:mm a');
+import 'package:unnispick_test/utils/forecast_detail.dart';
 
 class Forecast extends StatelessWidget {
   Forecast({super.key, required this.weatherData, required this.index});
@@ -15,13 +13,8 @@ class Forecast extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var timeStamp =
-        DateTime.fromMillisecondsSinceEpoch(weatherData['dt'] * 1000);
 
-    var weatherIcon = weatherData['weather'][0]['icon'];
-    var weatherDate = dateFormat.format(timeStamp);
-    var weatherTitle = weatherData['weather'][0]['main'];
-    double weatherTemp = weatherData['main']['temp'];
+    ForecastDetail forecastDetail = ForecastDetail(weatherData: weatherData);
 
     return InkWell(
         onTap: () {
@@ -42,19 +35,19 @@ class Forecast extends StatelessWidget {
                     child: SizedBox(
                         height: 80.0,
                         width: 80.0,
-                        child: weatherModel.getWeatherIcon(weatherIcon))),
+                        child: weatherModel.getWeatherIcon(forecastDetail.weatherIcon))),
                 Expanded(
                     flex: 1,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(weatherDate,
+                        Text(forecastDetail.weatherDate2,
                             style: kPrimaryTextStyle.copyWith(
                                 fontWeight: FontWeight.bold, fontSize: 16.0)),
-                        Text(weatherTitle,
+                        Text(forecastDetail.weatherTitle,
                             style: kPrimaryTextStyle.copyWith(fontSize: 16.0)),
-                        Text('Temp: ${weatherTemp.toInt()}°C',
+                        Text('Temp: ${forecastDetail.weatherTemp}°C',
                             style: kPrimaryTextStyle),
                       ],
                     ))

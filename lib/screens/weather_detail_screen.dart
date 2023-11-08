@@ -1,38 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:unnispick_test/constans.dart';
 import 'package:unnispick_test/services/weather.dart';
-
-DateFormat dateFormat = DateFormat('EEEE, MMMM dd, yyyy');
-DateFormat hourFormat = DateFormat('h:mm a');
-
-class ForecastDetail {
-  String weatherDate = '';
-  String weatherHour = '';
-  String weatherTitle = '';
-  String weatherDesc = '';
-  String weatherIcon = '10d';
-  double weatherTemp = 0.0;
-  double weatherTempMin = 0.0;
-  double weatherTempMax = 0.0;
-
-  ForecastDetail({
-    dynamic weatherData,
-  }) {
-    var timeStamp = weatherData['dt'] != null
-        ? DateTime.fromMillisecondsSinceEpoch(weatherData['dt'] * 1000)
-        : DateTime.now();
-
-    weatherDate = dateFormat.format(timeStamp);
-    weatherHour = hourFormat.format(timeStamp);
-    weatherTemp = weatherData['main']['temp'] ?? 0.0;
-    weatherTitle = weatherData['weather'][0]['main'] ?? 'error';
-    weatherDesc = weatherData['weather'][0]['description'] ?? '';
-    weatherIcon = weatherData['weather'][0]['icon'] ?? '10d';
-    weatherTempMin = weatherData['main']['temp_min'] ?? 0.0;
-    weatherTempMax = weatherData['main']['temp_max'] ?? 0.0;
-  }
-}
+import 'package:unnispick_test/utils/forecast_detail.dart';
 
 class WeatherDetailScreen extends StatefulWidget {
   const WeatherDetailScreen(
