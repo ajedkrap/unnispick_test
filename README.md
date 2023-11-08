@@ -33,12 +33,17 @@ Clean the project build to each native platform:
 
 
 Make sure check which platform is available by run `flutter devices`.
-For Android, emulator configuration available at AVD section in Android Studio.
-For iOS, simulator configutation available in Xcode.
+
+For Android emulator, configuration available at AVD section in Android Studio.\
+For iOS simulator, configutation available in Xcode.
+
 Run the application to desired platform:
 
 ```
 flutter run
 ```
+
+
+
 
 UI inspired by [Mobile Authentication by Cosmin Ferecatu](https://dribbble.com/shots/17675798-Mobile-authentication/attachments/12832987?mode=media)
