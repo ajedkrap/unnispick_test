@@ -12,7 +12,10 @@ class SingleSignOn {
       {required BuildContext context,
       String phoneNumber = '',
       required Function() onSuccess}) async {
+        
     TextEditingController? smsCodeController;
+
+    String smsCode = '';
 
     try {
       await auth.verifyPhoneNumber(
@@ -27,25 +30,24 @@ class SingleSignOn {
             }
           },
           timeout: const Duration(seconds: 12),
-          codeSent: (String verificationId, int? resendToken) async {
+          codeSent: (String verificationId, int? resendToken) {
             showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
                       backgroundColor: Colors.blueGrey[800],
-                      title: const Text("Enter SMS Code"),
+                      title: const Text("Enter SMS Code", style: kPrimaryTextStyle,),
                       content: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           TextField(
-                            controller: smsCodeController,
+                            style: kPrimaryTextStyle,
+                            onChanged: (value) {smsCode = value;},
                           ),
                         ],
                       ),
-                      actions: <Widget>[
+                      actions: [
                         TextButton(
                           onPressed: () async {
-                            var smsCode = smsCodeController!.text.trim();
-
                             PhoneAuthCredential credential =
                                 PhoneAuthProvider.credential(
                                     verificationId: verificationId,

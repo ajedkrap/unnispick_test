@@ -78,7 +78,6 @@ class _LoginScreenState extends State<LoginScreen> {
           context: context,
           phoneNumber: phoneNumber,
           onSuccess: () {
-            Navigator.of(context).pop();
             goToWeathers();
           });
     } catch (e) {
@@ -141,8 +140,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   PhoneNumberModal(
                                                       buttonTitle: 'Log in',
                                                       onPressed: (phoneNumber) {
-                                                        Navigator.of(context)
-                                                            .pop();
                                                         onPressPhoneLogin(
                                                             context,
                                                             phoneNumber);
