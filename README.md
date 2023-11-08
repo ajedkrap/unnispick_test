@@ -46,4 +46,4 @@ flutter run
 Download Apk: [unnispick_test-v1.0.0.apk](https://drive.google.com/file/d/1CBRTGDVE24oA6hN_qwl9Mx7UJtVsW5IY/view?usp=drive_link)
 
 
-UI inspired by [Mobile Authentication by Cosmin Ferecatu](https://dribbble.com/shots/17675798-Mobile-authentication/attachments/12832987?mode=media)
+UI inspired from [Mobile Authentication by Cosmin Ferecatu](https://dribbble.com/shots/17675798-Mobile-authentication/attachments/12832987?mode=media)
