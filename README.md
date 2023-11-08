@@ -9,7 +9,7 @@ This repository is intended to fulfill the test provided by Kotra / Unnispick
 Download or clone this repo by using the link below:
 
 ```
-https://github.com/zubairehman/flutter-boilerplate-project.git
+https://github.com/ajedkrap/unnispick_test.git
 ```
 
 **Step 2: Install Flutter Dependenscies**
