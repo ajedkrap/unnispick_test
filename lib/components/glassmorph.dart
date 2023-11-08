@@ -1,12 +1,15 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+const _defaultColor1 = Color.fromARGB(166, 196, 175, 255);
+const _defaultColor2 = Color.fromARGB(148, 128, 203, 195);
+const _defaultColor3 = Color.fromARGB(255, 126, 87, 194);
+
 class Glassmorph extends StatelessWidget {
   const Glassmorph({super.key, required this.children});
 
   // variables
   final Widget children;
-
   // events
 
   @override
@@ -23,7 +26,7 @@ class Glassmorph extends StatelessWidget {
                     height: 200.0,
                     width: 200.0,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(166, 196, 175, 255),
+                        color: _defaultColor1,
                         borderRadius: BorderRadius.circular(400.0)),
                   )),
               Positioned(
@@ -33,7 +36,7 @@ class Glassmorph extends StatelessWidget {
                     height: 450.0,
                     width: 180.0,
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(148, 128, 203, 195),
+                        color: _defaultColor2,
                         borderRadius: BorderRadius.circular(400.0)),
                   )),
               Positioned(
@@ -43,7 +46,7 @@ class Glassmorph extends StatelessWidget {
                     height: 140.0,
                     width: 140.0,
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple[400],
+                        color: _defaultColor3,
                         borderRadius: BorderRadius.circular(400.0)),
                   ))
             ],

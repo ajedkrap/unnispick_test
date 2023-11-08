@@ -58,7 +58,8 @@ class _UnnispickTestApp extends State<UnnispickTestApp> {
         LoginScreen.id: (context) => const LoginScreen(),
         RegistrationScreen.id: (context) => const RegistrationScreen(),
         WeathersScreen.id: (context) => const WeathersScreen(),
-        WeatherDetailScreen.id: (context) => const WeatherDetailScreen(),
+        WeatherDetailScreen.id: (context) =>
+            const WeatherDetailScreen(weatherData: null, index: 0),
       },
       // home: const WelcomeScreen(),
     );

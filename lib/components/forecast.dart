@@ -6,7 +6,6 @@ import 'package:unnispick_test/services/weather.dart';
 
 DateFormat dateFormat = DateFormat('EEE, MMM dd, yyyy h:mm a');
 
-
 class Forecast extends StatelessWidget {
   Forecast({super.key, required this.weatherData, required this.index});
 
@@ -29,9 +28,8 @@ class Forecast extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) =>
-                      WeatherDetailScreen(weatherData: weatherData)));
-          
+                  builder: (context) => WeatherDetailScreen(
+                      weatherData: weatherData, index: index)));
         },
         child: Container(
             width: double.infinity,
@@ -40,7 +38,7 @@ class Forecast extends StatelessWidget {
             child: Row(
               children: [
                 Hero(
-                    tag: 'weather-icon',
+                    tag: 'weather-$index',
                     child: SizedBox(
                         height: 80.0,
                         width: 80.0,
