@@ -1,16 +1,40 @@
-# unnispick_test
+# Unnispick Test
 
-A new Flutter project.
+This repository is intended to fulfill the test provided by Kotra / Unnispick
 
-## Getting Started
+## How to Use 
 
-This project is a starting point for a Flutter application.
+**Step 1: Clone the Project**
 
-A few resources to get you started if this is your first Flutter project:
+Download or clone this repo by using the link below:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+https://github.com/zubairehman/flutter-boilerplate-project.git
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Step 2: Install Flutter Dependenscies**
+
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
+
+**Step 3: Clean Build Project**
+
+Clean the project build to each native platform: 
+
+```
+- Android: cd android && ./gradlew clean && cd ..
+- iOS: cd ios && pod install && cd ..
+```
+
+**Step 4: Run Application**
+
+Run the application to desired platform, make sure check which platform is available by run `flutter devices`: 
+
+```
+flutter run
+```
+
+UI inspired by [Mobile Authentication by Cosmin Ferecatu](https://dribbble.com/shots/17675798-Mobile-authentication/attachments/12832987?mode=media)
