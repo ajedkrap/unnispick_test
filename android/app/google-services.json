@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "808671370237",
+    "project_id": "unnispick-test",
+    "storage_bucket": "unnispick-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808671370237:android:8c72d5b7cd18c84af39794",
+        "android_client_info": {
+          "package_name": "com.example.unnispick_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcuIhHAEXkelxm206Mzg1fa8kGbt6q1kA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
