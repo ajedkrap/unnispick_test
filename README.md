@@ -31,7 +31,11 @@ Clean the project build to each native platform:
 
 **Step 4: Run Application**
 
-Run the application to desired platform, make sure check which platform is available by run `flutter devices`: 
+
+Make sure check which platform is available by run `flutter devices`.
+For Android, emulator configuration available at AVD section in Android Studio.
+For iOS, simulator configutation available in Xcode.
+Run the application to desired platform:
 
 ```
 flutter run
