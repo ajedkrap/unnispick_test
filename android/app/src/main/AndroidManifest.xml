@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
-        android:label="unnispick_test"
+        android:label="Unnispick Test"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
